@@ -1,0 +1,28 @@
+| Column Name | Data Type | Description |
+| --- | --- | --- |
+| id | SERIAL | Unique identifier |
+| post_id | INTEGER | Foreign key referencing the posts table |
+| user_id | INTEGER | Foreign key referencing the users table |
+| content | TEXT | Comment content |
+| created_at | TIMESTAMP | Timestamp of comment creation |
+
+## Relationships
+
+* Users has many posts through the `posts` table
+* Posts belongs to one user
+* Posts has many comments through the `comments` table
+* Comments belong to one post
+* Comments belong to one user
+
+## Indexes
+
+* idx_users_email: index on `users` table `email` column
+* idx_posts_user_id: index on `posts` table `user_id` column
+* idx_comments_post_id: index on `comments` table `post_id` column
+
+## Normalization Summary
+
+* First normal form (1NF): each table has a unique column that can be used to identify each row, and each cell in the table contains a single value
+* Second normal form (2NF): each non-key attribute of a table depends on the entire primary key
+* Third normal form (3NF): if a table is in 2NF, and a non-key attribute depends on another non-key attribute, it should be moved to a separate table
+* Boyce-Codd normal form (BCNF): if a table is in 3NF, and a non-key attribute depends on a single attribute within a multicolumn primary key, it should be moved to a separate table
