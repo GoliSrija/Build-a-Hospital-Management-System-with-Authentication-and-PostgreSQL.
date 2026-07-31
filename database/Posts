@@ -1,0 +1,8 @@
+| Column Name | Data Type | Description |
+| --- | --- | --- |
+| id | SERIAL | Unique identifier |
+| user_id | INTEGER | Foreign key referencing the users table |
+| title | VARCHAR(255) | Post title |
+| content | TEXT | Post content |
+| created_at | TIMESTAMP | Timestamp of post creation |
+| updated_at | TIMESTAMP | Timestamp of post last update |
