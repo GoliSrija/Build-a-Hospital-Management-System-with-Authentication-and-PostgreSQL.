@@ -1,0 +1,8 @@
+| Column Name | Data Type | Description |
+| --- | --- | --- |
+| id | SERIAL | Unique identifier |
+| email | VARCHAR(255) | User email |
+| password | VARCHAR(255) | User password |
+| name | VARCHAR(255) | User name |
+| created_at | TIMESTAMP | Timestamp of user creation |
+| updated_at | TIMESTAMP | Timestamp of user last update |
